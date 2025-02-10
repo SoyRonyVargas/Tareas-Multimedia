@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .circulo {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="circulo"></div>
+</body>
+<script>
+
+    changeColorRandom = () => {
+        let circulo = document.querySelector('.circulo');
+        let colors = ["red", "blue", "green", "yellow", "purple", "orange", "pink"];
+        let randomColor = colors[Math.floor(Math.random() * colors.length)];
+        circulo.style.backgroundColor = randomColor;
+    }
+
+    setInterval(changeColorRandom, 500);
+
+</script>
+</html>
